@@ -1,0 +1,369 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>invisionapp</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <script src="assets/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+    <!-- Start Header -->
+    <header class="header" role="banner">
+      <div class="logo">
+        <a href="/">
+          <img class="logo-image" src="assets/img/logo.png" alt="Logo">
+          <span class="logo-text">Company Logo</span>
+        </a>
+      </div>
+      <!-- Start Navigations -->
+      <nav class="nav" role="navigation">
+        <ul>
+          <li>
+            <a class="js-dropdown"><span class="notification-icon"></span></a>
+            <!-- Start Popup notification menu -->
+            <div class="dropdown-wrap">
+              <span class="close close-js"></span>
+              <div class="dropdown-wrap__container">
+                <ul class="dropdown-wrap__list">
+                  <li class="dropdown-wrap__title">Appoointment booked</li>
+                  <li class="dropdown-wrap__date">Mon 23 Jan 2016, 2:20pm</li>
+                  <li class="dropdown-wrap__profile-name">Daniel Jones</li>
+                </ul>
+              </div>
+
+              <div class="dropdown-wrap__container">
+                <ul class="dropdown-wrap__list">
+                  <li class="dropdown-wrap__title">Appoointment notes added by Dr Vivian Chen</li>
+                  <li class="dropdown-wrap__date">Mon 23 Jan 2016, 2:20pm</li>
+                  <li class="dropdown-wrap__profile-name">Daniel Jones</li>
+                </ul>
+              </div>
+
+              <div class="dropdown-wrap__container">
+                <ul class="dropdown-wrap__list">
+                  <li class="dropdown-wrap__title">Referral added by Dr Vivien Chen</li>
+                  <li class="dropdown-wrap__date">Mon 23 Jan 2016, 2:20pm</li>
+                  <li class="dropdown-wrap__profile-name">Daniel Jones</li>
+                </ul>
+              </div>
+            </div>
+            <!-- // Popup notification menu -->
+          </li>
+          <li class="relative">
+            <a class="js-profile-menu">
+              <span class="profile-name">Daniel</span>
+              <span class="profile-image"><img src="assets/img/profile-image.png" alt="profile image"></span>
+            </a>
+            <div class="profile-menu">
+              <ul class="profile-menu__list">
+                <li><a href="">Home</a></li>
+                <li><a href="">My profile</a></li>
+                <li><a href="">Help centre</a></li>
+                <li><a href="">Take a tour</a></li>
+                <li><a href="">Invite a friend</a></li>
+                <li><a href="">Log out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- // Navigations -->
+    </header>
+    <!-- // Header -->
+
+    <div class="container">
+      <!-- Start Tab Menu -->
+      <div class="tab-menu">
+        <ul class="tab">
+          <li>
+            <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Appointmens')" id="defaultOpen">
+              <span class="icon icon-appointments"></span>
+              <span class="tab-menu__title">Appointments</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Prescriptions')">
+              <span class="icon icon-prescriptions"></span>
+              <span class="tab-menu__title">Prescriptions</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Healt')">
+              <span class="icon icon-health"></span>
+              <span class="tab-menu__title">Healt Tracking</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Uploads')">
+              <span class="icon icon-uploads"></span>
+              <span class="tab-menu__title">Uploads</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Medical')">
+              <span class="icon icon-medical"></span>
+              <span class="tab-menu__title">Medical History</span>
+            </a>
+          </li>
+        </ul>
+
+        <div id="Appointmens" class="tabcontent">
+          <div class="tabcontent__text-container">
+            <h3 class="tabcontent__title">Appointments</h3>
+            <p class="tabcontent__text">Provide our doctors with your medical backgorund. Lorem ipsum adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <ul class="tabcontent__list">
+              <li><a class="tabcontent-btn__edit">Edit my medical history</a></li>
+              <li><a class="tabcontent-btn__add">Add voucher</a></li>
+            </ul>
+            <!-- Edit  Messge-->
+            <div class="edit-message">
+              <span class="edit-message__text">Medical history edited</span>
+              <span class="edit-message__close close-js"></span>
+            </div>
+          </div>
+          <div class="tabcontent__image-container">
+            <img src="assets/img/section-image.png" alt="Section Image">
+          </div>
+        </div>
+
+        <div id="Prescriptions" class="tabcontent">
+          <div class="tabcontent__text-container">
+            <h3 class="tabcontent__title">Prescriptions</h3>
+            <p class="tabcontent__text">Provide our doctors with your medical backgorund. Lorem ipsum adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+          <div class="tabcontent__image-container">
+            <img src="assets/img/section-image.png" alt="Section Image">
+          </div>
+        </div>
+
+        <div id="Healt" class="tabcontent">
+          <div class="tabcontent__text-container">
+            <h3 class="tabcontent__title">Health Tracking</h3>
+            <p class="tabcontent__text">Provide our doctors with your medical backgorund. Lorem ipsum adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+          <div class="tabcontent__image-container">
+            <img src="assets/img/section-image.png" alt="Section Image">
+          </div>
+        </div>
+
+        <div id="Uploads" class="tabcontent">
+          <div class="tabcontent__text-container">
+            <h3 class="tabcontent__title">Uploads</h3>
+            <p class="tabcontent__text">Provide our doctors with your medical backgorund. Lorem ipsum adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+          <div class="tabcontent__image-container">
+            <img src="assets/img/section-image.png" alt="Section Image">
+          </div>
+        </div>
+
+        <div id="Medical" class="tabcontent">
+          <div class="tabcontent__text-container">
+            <h3 class="tabcontent__title">Medical History</h3>
+            <p class="tabcontent__text">Provide our doctors with your medical backgorund. Lorem ipsum adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+          <div class="tabcontent__image-container">
+            <img src="assets/img/section-image.png" alt="Section Image">
+          </div>
+        </div>
+      </div>
+      <!-- // Tab Menu -->
+      
+      <!-- Start Content -->
+      <div class="content">
+        <!-- Start Content Detail -->
+        <div class="content-detail">
+          <ul class="content-detail__list">
+            <li>
+              <div class="content-detail__text-wrap">
+                <span class="content-detail__title">Current medical conditions</span>
+                <a class="content-detail-link__edit">Edit</a>
+              </div>
+              <div class="content-detail__selected-wrap">
+                <a class="content-detail-link">High blood pressure</a>
+                <a class="content-detail-link">High blood pressure</a>
+                <a class="content-detail-link">High blood pressure</a>
+              </div>
+            </li>
+            <li>
+              <div class="content-detail__text-wrap">
+                <span class="content-detail__title">Past medical conditions</span>
+                <a class="content-detail-link__edit">Edit</a>
+              </div>
+              <div class="content-detail__selected-wrap">
+                <a class="content-detail-link">High blood pressure</a>
+              </div>
+            </li>
+            <li>
+              <div class="content-detail__text-wrap">
+                <span class="content-detail__title">Current medication</span>
+                <a class="content-detail-link__edit">Edit</a>
+              </div>
+              <div class="content-detail__selected-wrap">
+                <span class="content-detail__txt">None selected</span>
+              </div>
+            </li>
+            <li>
+              <div class="content-detail__text-wrap">
+                <span class="content-detail__title">Allergies</span>
+                <a class="content-detail-link__edit">Edit</a>
+              </div>
+              <div class="content-detail__selected-wrap">
+                <span class="content-detail__txt">None selected</span>
+              </div>
+            </li>
+            <li>
+              <div class="content-detail__text-wrap">
+                <span class="content-detail__title">Family history</span>
+                <a class="content-detail-link__edit">Edit</a>
+              </div>
+              <div class="content-detail__selected-wrap">
+                <a class="content-detail-link">High blood pressure</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- // Content Detail -->
+        
+        <!-- Start Sidebar -->
+        <div class="sidebar">
+          <ul class="sidebar__list">
+            <li>
+              <span class="sidebar__profile-image">
+                <img src="assets/img/profile-image.png" alt="profile image">
+              </span>
+            </li>
+            <li>
+              <span class="sidebar__name">Daniel Jones</span>
+            </li>
+            <li>
+              <a class="sidebar__profile-link">My profile</a>
+            </li>
+          </ul>
+          <div class="switch-profile">
+            <div class="switch-profile-link">
+              <span class="switch-profile-link__txt">
+                Switch profile 
+              </span>
+              <div class="switch-profile-link__icon-wrap">
+                <span class="switch-profile-link__icon-img"></span>
+              </div>
+            </div>
+            <ul class="switch-profile__list">
+              <li>
+                <span class="switch-profile__image">
+                  <img src="assets/img/switch-profile-image.png" alt="profile image">
+                </span>
+                <span class="switch-profile__name">
+                  Daniel Jones
+                </span>
+              </li>
+              <li>
+                <span class="switch-profile__image">
+                  <img src="assets/img/switch-profile-image.png" alt="profile image">
+                </span>
+                <span class="switch-profile__name">
+                  Sarah Jones
+                </span>
+              </li>
+              <li>
+                <span class="switch-profile__image">
+                  <img src="assets/img/switch-profile-image.png" alt="profile image">
+                </span>
+                <span class="switch-profile__name">
+                  Alice Jones
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="book-wrap">
+            <ul class="book__list">
+              <li><a class="book__btn">Book an appointment</a></li>
+              <li>Membership - 3 people</li>
+              <li class="expires-date">Expires 20 / 11 / 2015</li>
+              <li>My plan, family & billing</li>
+            </ul>
+          </div>
+          
+          <!-- Start Offer Wrap -->
+          <div class="offer-wrap">
+            <div class="offer-content">
+              <span class="offer__title">Add your family members for only </span>
+              <span class="offer__price">£10</span>
+              <a href="" class="offer__btn">Add family members</a>
+            </div>
+          </div>
+          <!-- // Offer Wrap -->
+        </div>
+        <!-- // Sidebar -->
+      </div>
+      <!-- // Content -->
+    </div>
+  
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="footer-wrap">
+        <div class="footer-container">
+          <div class="footer-logo-wrap">
+            <span class="footer-logo__image">Company Logo</span>
+          </div>
+          <div class="footer-list-wrap">
+            <ul class="footer-list">
+              <li>COMPANY</li>
+              <li>How It Works</li>
+              <li>About Us</li>
+              <li>Our Doctors</li>
+              <li>For Business</li>
+              <li>Contact Us</li>
+            </ul>
+            <ul class="footer-list">
+              <li>SERVICE</li>
+              <li>Home</li>
+              <li>My Profile</li>
+              <li>Help Centre </li>
+            </ul>
+            <ul class="footer-list">
+              <li>DOWNLOADS</li>
+              <li><span class="app-store-icon"></span></li>
+              <li><span class="google-play-icon"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="impressum-wrap">
+        <div class="footer-container">
+          <ul class="impressum-list">
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- // Footer -->
+  </div>
+
+  
+  
+  <div class="add-message">
+    <div class="add-message__content">
+      <span class="add-message__close close-js"></span>
+      <span class="add-message__title">Add voucher</span>
+      <div class="add-message__text-wrap">
+        <p class="add-message__text">Sed vitae quam dui. Sed a leo non orci fermentum posuere rhoncus pretium ipsum. Phasellus congue, dui aliquam ornare sollicitudin, est magna egestas tellus, vel commodo nulla orci at odio. Ut in turpis augue. Praesent rhoncus id erat sed vulputate. Maecenas a nisi dui.</p>
+        <div class="add-message__voucher">
+          <label for='voucher'>Voucher code</label>
+          <input type='text' id='voucherCode' / placeholder="Enter voucher code...">
+        </div>
+      </div>
+      <a class="add-message__btn">Submit voucher code</a>
+    </div>
+  </div>
+    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+  </body>
+</html>

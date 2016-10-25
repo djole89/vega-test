@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html {
+  background-color: rgb(230, 230, 230);
+}
+body {
+  font-family: $main-font;
+  color: #444;
+}
+body,html{
+	min-height: 100vh;
+}

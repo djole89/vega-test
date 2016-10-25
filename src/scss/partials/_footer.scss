@@ -1,0 +1,92 @@
+footer {
+	width: 100%;
+}
+
+.footer-wrap {
+	width: 100%;
+	padding: 45px 0 70px 0;
+	background-color: $light-black;
+}
+
+.footer-container {
+	max-width: 980px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.footer-logo-wrap {
+	width: 460px;
+	text-align: left;
+}
+
+.footer-logo__image {
+	display: inline-block;
+	font-size: 17px;
+	font-family: museosans_900;
+	color: $white;
+	&::before {
+		content: '';
+		display: inline-block;
+		margin-right: 7px;
+		width: 32px;
+		height: 31px;
+		background-image: url("../img/footer-logo.png");
+		background-repeat: no-repeat;
+		vertical-align: middle;
+	}
+}
+
+.footer-list-wrap {
+	max-width: 520px;
+	display: inline-flex;
+}
+
+.footer-list {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	margin-right: 110px;
+	list-style: none;
+	&:last-child {
+		margin-right: 0;
+	}
+	li {
+		display: block;
+		font-family: museosans_500;
+		font-size: 14px;
+		text-align: left;
+		color: $white;
+		padding-bottom: 30px;
+		&:first-child {
+			color: #777e8a;
+			padding-bottom: 27px;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	.app-store-icon {
+		display: block;
+		width: 116px;
+		height: 35px;
+		background-image: url("../img/app-store-icon.png");
+	}
+	.google-play-icon {
+		display: block;
+		width: 119px;
+		height: 35px;
+		background-image: url("../img/google-play-icon.png");
+	}
+}
+
+.impressum-wrap {
+	width: 100%;
+	background-color: #061731;
+	padding: 18px 0;
+	@include box-shadow-inset(0, 3px, 10px, rgba(0, 0, 0, 0.1));
+
+}
+
+.impressum-list {
+
+}

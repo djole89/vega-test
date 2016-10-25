@@ -1,0 +1,200 @@
+.nav {
+	display: inline-block;
+	float: right;
+	padding: 10px 30px 0 0;
+	ul {
+		list-style: none;
+		display: table;
+		li {
+			display: table-cell;
+    		vertical-align: middle;
+    		&:first-child{
+    			position: relative;
+    		}
+		}
+	}
+}
+
+/* Notifications */
+.notification-icon {
+	position: relative;
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-image: url("../img/notification-icon.png");
+	cursor: pointer;
+	&::after {
+		content: '';
+		position: absolute;
+		right: -10px;
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		@include border-radius(8px);
+		background-color: $gold;
+	}
+}
+
+.profile-name {
+	font-size: 14px;
+	margin-left: 30px;
+	color: $white;
+	cursor: pointer;
+	font-family: museosans_700;
+	vertical-align: middle;
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 6px;
+		padding-right: 9px;
+		vertical-align: middle;
+		background-image: url("../img/dropdown-icon.png");
+		background-repeat: no-repeat;
+	}
+}
+
+.profile-image {
+	@include border-radius(45px);
+	vertical-align: middle;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-left: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px $dark-blue, 0 0 0 6px $light-blue;
+    img {
+    	max-width: 100%;
+    	cursor: pointer;
+    }
+}
+
+/* Popup notifications menu */
+.dropdown-wrap {
+	@include border-radius(5px);
+	width: 300px;
+	background-color: $white;
+	position: absolute;
+	right: -40px;
+	top: 50px;
+	visibility: hidden;
+  	opacity: 0;
+  	transition: visibility 0s linear 300ms, opacity 300ms;
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 17px;
+		height: 9px;
+		position: absolute;
+	    top: -9px;
+	    right: 45px;
+		background-image: url("../img/arrow-up-icon.png");
+	}
+	.close {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+	    top: 23px;
+    	right: 20px;
+    	cursor: pointer;
+    	z-index: 1;
+		background-image: url("../img/close-icon.png");
+	}
+	.dropdown-wrap__container {
+		padding: 22px 60px 18px 0;
+		border-bottom: solid 1px $grey;
+		position: relative;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			left: 16px;
+    		top: 24px;
+			position: absolute;
+			background-image: url("../img/bell-icon.png");
+		}
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.dropdown-wrap__list {
+		display: block;
+		li {
+			padding-bottom: 5px;
+			display: block;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+	.dropdown-wrap__title {
+		color: $light-black;
+		display: inline-block;
+		font-size: 15px;
+		font-family: 'museosans_700';
+	}
+	.dropdown-wrap__date {
+		color: $indigo-blue;
+		font-size: 15px;
+		font-family: 'museosans_500';
+	}
+	.dropdown-wrap__profile-name {
+		color: $dark-grey;
+		font-size: 15px;
+		font-family: 'museosans_300';
+	}
+}
+
+.js-profile-menu {
+	display: inline-block;
+	position: relative;
+}
+
+/* Popup Profile menu */
+.profile-menu {
+	@include border-radius(5px);
+	visibility: hidden;
+  	opacity: 0;
+  	transition: visibility 0s linear 300ms, opacity 300ms;
+  	width: 157px;
+  	background-color: $light-black;
+  	position: absolute;
+  	right: 36px;
+    top: 52px;
+    text-align: center;
+    padding: 27px 0;
+  	&::before {
+  		content:" ";
+  		margin: 0 auto;
+  		display: block;
+    	width: 0;
+		height: 0;
+		top: -10px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		border-style: solid;
+		border-width: 0 10px 10px 10px;
+		border-color: transparent transparent $light-black transparent;
+  	}
+  	.profile-menu__list {
+  		display: block;
+  		padding: 0;
+  		li {
+  			display: block;
+  			padding-bottom: 18px;
+  			&:last-child {
+  				padding-bottom: 0;
+  			}
+  		}
+  		a {
+  			display: block;
+  			color: $white;
+  			text-decoration: none;
+  			font-size: 14px;
+  			font-family: 'museosans_700';
+  		}
+  	}
+}
