@@ -6,6 +6,14 @@
  * @version 1.0.5
  * Copyright 2016. MIT licensed.
  */
+/*!
+ * fastshell
+ * Fiercely quick and opinionated front-ends
+ * https://HosseinKarami.github.io/fastshell
+ * @author Hossein Karami
+ * @version 1.0.5
+ * Copyright 2016. MIT licensed.
+ */
 (function ($, window, document, undefined) {
 
   'use strict';
@@ -92,6 +100,31 @@ $(".switch-profile-link").click(function () {
   $(".switch-profile__list").toggleClass("show");
   $(".switch-profile-link__icon-img").toggleClass("rotate");
 });
+
+// Mobile Menu
+
+$(function() {
+  
+    // Toggle Nav on Click
+    $('.toggle-nav').click(function() {
+        // Calling a function in case you want to expand upon this.
+        toggleNav();
+    });
+
+  
+});
+
+function toggleNav() {
+    if ($('.wrap').hasClass('show-nav')) {
+        // Do things on Nav Close
+        $('.wrap').removeClass('show-nav');
+    } else {
+        // Do things on Nav Open
+        $('.wrap').addClass('show-nav');
+    }
+
+    //$('#site-wrapper').toggleClass('show-nav');
+}
 
 
 })(jQuery, window, document);

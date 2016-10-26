@@ -41,7 +41,21 @@
 	}
 }
 
+.toggle-nav {
+	display: none !important;
+}
+
+.hamburger-icon {
+	display: block;
+	width: 21px;
+	height: 14px;
+	background-image: url("../img/hamburger-icon.png");
+	margin-left: 22px;
+	cursor: pointer;
+}
+
 /* Notifications */
+
 .notification-icon {
 	position: relative;
 	display: block;
