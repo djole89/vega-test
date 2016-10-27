@@ -44,6 +44,10 @@
     -webkit-transform:rotate(180deg);
 }
 
+.show-block {
+	display: block !important;
+}
+
 /* Tab Menu */
 
 .tabcontent {
@@ -266,15 +270,16 @@
 
 .add-message {
 	visibility: hidden;
-  opacity: 0;
-	height: 1945px;
-  transition: visibility 0s linear 300ms, opacity 300ms;
-	position: absolute;
-  background-color: rgba(251, 251, 251, 0.7);
-  top: 0;
+  	opacity: 0;
+	height: 100%;
+  	transition: visibility 0s linear 300ms, opacity 300ms;
+	position: fixed;
+  	background-color: rgba(251, 251, 251, 0.7);
+  	top: 0;
 	left: 0;
-  bottom: 0;
-  right: 0;
+  	bottom: 0;
+  	right: 0;
+  	z-index: 3;
 }
 
 .add-message__content {
@@ -288,6 +293,7 @@
 	transform: translate(-50%, -50%);
 	background-color: $white;
 	text-align: center;
+	z-index: 4;
 }
 
 .add-message__text-wrap {
@@ -363,8 +369,98 @@
 /* Tab Menu Mobile */
 
 .tab-menu-mobile {
-	display: block;
+	display: none;
 	width: 100%;
+	position: relative;
+}
+
+.tab-menu-mobile__select {
+	@include box-shadow(0, 0, 11px, rgba(0, 0, 0, 0.20));
+	width: 100%;
+	background-color: $white;
+	border-top: solid 1px #789ae6;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.tab-menu-mobile__select-title {
+	display: inline-block;
+	font-family: museosans_900;
+	font-size: 22px;
+	color: $gold;
+	&::after {
+		content: '';
+		display: inline-block;
+		margin-left: 8px;
+		width: 17px;
+		height: 10px;
+		background-image: url("../img/arrow-down-icon.png");
+		vertical-align: middle;
+	}
+}
+
+.tab-menu-mobile__list-wrap {
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: 71px;
+}
+
+.tab-menu-mobile__list {
+	width: 100%;
+	background-color: #fff;
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		font-size: 17px;
+		font-family: museosans_700;
+		padding: 20px;
+		border-bottom: solid 1px #f1f1f1;
+	}
+}
+
+.tab-menu-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+	width: 17px;
+	height: 17px;
+	background-repeat: no-repeat;
+	background-image: url("../img/health-tracking-icon.png");
+}
+
+.tab-menu-icon__prescriptions {
+	@extend .tab-menu-icon;
+	background-image: url("../img/prescriptions-icon.png");
+}
+
+.tab-menu-icon__uploads {
+	@extend .tab-menu-icon;
+	background-image: url("../img/uploads-icon.png");
+}
+
+.tab-menu-icon__medical {
+	@extend .tab-menu-icon;
+	background-image: url("../img/medical-icon.png");
+}
+
+.tab-menu-mobile__active {
+	background-repeat: no-repeat;
+	background-image: url("../img/check-icon.png"); 
+    background-position: 93% 25px;
+}
+
+.mobile .tab-menu-mobile__overall {
+	height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 450px;
+	background-color: rgba(8, 31, 63, 0.9);
+	left: 0;
+	z-index: 1;
+	display: none;
 }
 
 /* Content */

@@ -494,6 +494,7 @@ th {
 /* Popup notifications menu */
 .dropdown-wrap {
   border-radius: 5px;
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.2);
   width: 300px;
   background-color: #ffffff;
   position: absolute;
@@ -640,6 +641,9 @@ th {
   transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg); }
+
+.show-block {
+  display: block !important; }
 
 /* Tab Menu */
 .tabcontent {
@@ -836,14 +840,15 @@ th {
 .add-message {
   visibility: hidden;
   opacity: 0;
-  height: 1945px;
+  height: 100%;
   transition: visibility 0s linear 300ms, opacity 300ms;
-  position: absolute;
+  position: fixed;
   background-color: rgba(251, 251, 251, 0.7);
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0; }
+  right: 0;
+  z-index: 3; }
 
 .add-message__content {
   border-radius: 5px;
@@ -857,7 +862,8 @@ th {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #ffffff;
-  text-align: center; }
+  text-align: center;
+  z-index: 4; }
 
 .add-message__text-wrap {
   padding: 38px 0 33px 0;
@@ -934,8 +940,83 @@ th {
 
 /* Tab Menu Mobile */
 .tab-menu-mobile {
+  display: none;
+  width: 100%;
+  position: relative; }
+
+.tab-menu-mobile__select {
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-color: #ffffff;
+  border-top: solid 1px #789ae6;
+  text-align: center;
+  padding: 20px 0; }
+
+.tab-menu-mobile__select-title {
+  display: inline-block;
+  font-family: museosans_900;
+  font-size: 22px;
+  color: #ffb305; }
+  .tab-menu-mobile__select-title::after {
+    content: '';
+    display: inline-block;
+    margin-left: 8px;
+    width: 17px;
+    height: 10px;
+    background-image: url("../img/arrow-down-icon.png");
+    vertical-align: middle; }
+
+.tab-menu-mobile__list-wrap {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 71px; }
+
+.tab-menu-mobile__list {
+  width: 100%;
+  background-color: #fff;
   display: block;
-  width: 100%; }
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .tab-menu-mobile__list li {
+    font-size: 17px;
+    font-family: museosans_700;
+    padding: 20px;
+    border-bottom: solid 1px #f1f1f1; }
+
+.tab-menu-icon, .tab-menu-icon__prescriptions, .tab-menu-icon__uploads, .tab-menu-icon__medical {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 17px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-image: url("../img/health-tracking-icon.png"); }
+
+.tab-menu-icon__prescriptions {
+  background-image: url("../img/prescriptions-icon.png"); }
+
+.tab-menu-icon__uploads {
+  background-image: url("../img/uploads-icon.png"); }
+
+.tab-menu-icon__medical {
+  background-image: url("../img/medical-icon.png"); }
+
+.tab-menu-mobile__active {
+  background-repeat: no-repeat;
+  background-image: url("../img/check-icon.png");
+  background-position: 93% 25px; }
+
+.mobile .tab-menu-mobile__overall {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 450px;
+  background-color: rgba(8, 31, 63, 0.9);
+  left: 0;
+  z-index: 1;
+  display: none; }
 
 /* Content */
 .content {
@@ -1425,15 +1506,26 @@ footer {
     margin: 0 auto;
     position: absolute; }
   .header {
-    height: 242px; }
+    height: 79px;
+    position: fixed;
+    top: 0;
+    z-index: 4; }
   /* Content */
   .content-detail {
     display: block;
     width: 100%; }
   .content {
     margin: 0; }
-  /* Tab Menu*/
+  .container {
+    top: 79px;
+    z-index: 1; }
+  /* Tab Menu */
   .tab-menu {
+    display: none; }
+  .tab-menu-mobile {
+    display: block; }
+  /* Footer */
+  footer {
     display: none; } }
 
 @media print {

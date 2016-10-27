@@ -112,6 +112,7 @@
 /* Popup notifications menu */
 .dropdown-wrap {
 	@include border-radius(5px);
+	@include box-shadow(0, 0, 11px, rgba(0, 0, 0, 0.20));
 	width: 300px;
 	background-color: $white;
 	position: absolute;

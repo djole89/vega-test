@@ -1,18 +1,5 @@
 /*!
- * fastshell
- * Fiercely quick and opinionated front-ends
- * https://HosseinKarami.github.io/fastshell
- * @author Hossein Karami
- * @version 1.0.5
- * Copyright 2016. MIT licensed.
- */
-/*!
- * fastshell
- * Fiercely quick and opinionated front-ends
- * https://HosseinKarami.github.io/fastshell
- * @author Hossein Karami
- * @version 1.0.5
- * Copyright 2016. MIT licensed.
+
  */
 (function ($, window, document, undefined) {
 
@@ -56,7 +43,7 @@ $(".js-profile-menu").click(function () {
 // Close Profile menu when click outside of container
 $(document).click(function (e) {
   if (!$(e.target).parents().andSelf().is(".js-profile-menu")) {
-      $(".profile-menu").removeClass("show");
+    $(".profile-menu").removeClass("show");
   }
 });
 
@@ -77,6 +64,12 @@ $('.tablinks').on( "click", function() {
 // Edit Message
 $(".tabcontent-btn__edit").click(function () {
   $(".edit-message").toggleClass("show");
+});
+
+// Dropdown for mobile tab menu
+$(".tab-menu-mobile__select-title").click(function () {
+  $(".tab-menu-mobile__list-wrap").toggleClass("show-block");
+  $(".tab-menu-mobile__overall").toggleClass("show-block");
 });
 
 // Close Edit message container when click outside of container
@@ -105,43 +98,59 @@ $(".switch-profile-link").click(function () {
 
 $(function() {
   
-    // Toggle Nav on Click
-    $('.toggle-nav').click(function() {
-        // Calling a function in case you want to expand upon this.
-        toggleNav();
-    });
-
-  
+  // Toggle Nav on Click
+  $('.toggle-nav').click(function() {
+      // Calling a function in case you want to expand upon this.
+      toggleNav();
+  });
 });
 
 function toggleNav() {
-    if ($('.wrap').hasClass('show-nav')) {
-        // Do things on Nav Close
-        $('.wrap').removeClass('show-nav');
-    } else {
-        // Do things on Nav Open
-        $('.wrap').addClass('show-nav');
+  if ($('.wrap').hasClass('show-nav')) {
+      // Do things on Nav Close
+      $('.wrap').removeClass('show-nav');
+  } else {
+      // Do things on Nav Open
+      $('.wrap').addClass('show-nav');
+  }
+
+  //$('#site-wrapper').toggleClass('show-nav');
+}
+
+// Add class when widnow resize
+(function($) {
+    var $window = $(window),
+        $html = $('html');
+
+    function resize() {
+        if ($window.width() < 990) {
+            return $html.addClass('mobile');
+        }
+
+        $html.removeClass('mobile');
     }
 
-    //$('#site-wrapper').toggleClass('show-nav');
-}
+    $window
+        .resize(resize)
+        .trigger('resize');
+})(jQuery);
 
 
 })(jQuery, window, document);
 
 //Tab Menu
 function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
 
 // Get the element with id="defaultOpen" and click on it
