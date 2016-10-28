@@ -463,6 +463,19 @@
 	display: none;
 }
 
+.tab-menu-mobile__content {
+	width: 100%;
+	padding: 40px 20px;
+	text-align: center;
+}
+
+.tab-menu-mobile__content-text {
+	font-family: museosans_300;
+	font-size: 28px;
+	color: $text-color;
+	line-height: 40px;
+}
+
 /* Content */
 
 .content {
